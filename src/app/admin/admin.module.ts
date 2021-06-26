@@ -5,6 +5,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialDesign } from '../material/material.module';
 import { ProductsComponent } from './products/products.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { FormsModule } from '@angular/forms';
 const routes: Routes = [
   {
     path:'',
@@ -17,6 +19,11 @@ const routes: Routes = [
       {
         path:'products',
         component:ProductsComponent
+      },
+      {
+        path:'',
+        pathMatch:'full',
+        redirectTo:'/admin/dashboard'
       }
     ]
   }
@@ -26,12 +33,14 @@ const routes: Routes = [
   declarations: [
     AdminComponent,
     DashboardComponent,
-    ProductsComponent
+    ProductsComponent,
+    ProductDetailComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    MaterialDesign
+    MaterialDesign,
+    FormsModule
   ]
 })
 export class AdminModule { }

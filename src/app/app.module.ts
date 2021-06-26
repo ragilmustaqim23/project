@@ -13,6 +13,7 @@ import {MatCardModule} from '@angular/material/card';
 import { MatError } from '@angular/material/form-field';
 import { MaterialDesign } from './material/material.module';
 import { ForgotComponent } from './auth/forgot/forgot.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ForgotComponent } from './auth/forgot/forgot.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialDesign
+    MaterialDesign,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,26 @@
+<h3 mat-dialog-title>
+    Detail Masakan
+ </h3>
+ <div mat-dialog-content>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Menu</mat-label>
+        <input matInput [(ngModel)]="data.title">      
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Kesulitan Bahan Yang Dicari</mat-label>
+        <input matInput [(ngModel)]="data.author" >     
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Jenis Masakan</mat-label>
+        <input matInput [(ngModel)]="data.publisher" >     
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Kisaran Harga Bahan</mat-label>
+        <input matInput type="number" [(ngModel)]="data.price" >      
+    </mat-form-field>
+ </div>
+ <div mat-dialog-actions align="end">
+ <button mat-button mat-dialog-close>Batal</button>
+ <button mat-flat-button (click)="saveData()" [disabled]="loading">{{loading ? 'Menyimpan..':'Simpan'}} </button>
+ </div>
+
