@@ -36,13 +36,14 @@ export class ProductsComponent implements OnInit {
   getBooks()
   {
     this.loading=true;
-    this.api.get('books').subscribe(result=>{
-      this.books=result;
-      this.loading=false;
-    },error=>{
-      this.loading=false;
-      alert('Ada masalah saat input data. Coba lagi!');
-    })
+   this.api.get('bookswithauth').subscribe(result=>{
+     this.books=result;
+     this.loading=false;
+   },error=>{
+     this.loading=false;
+     alert('Ada masalah saat pengambilan data. Coba lagi!');
+   })
+
   }  
   
   productDetail(data: any,idx: number)
@@ -66,7 +67,7 @@ export class ProductsComponent implements OnInit {
  deleteProducts(id: any,idx: any)
  {
 
-   var conf=confirm('Hapuskah Ni?');
+   var conf=confirm('Jika Dihapus maka data tidak akan terlihat lagi, yakin untuk menghapus?');
    if(conf)
    {
     this.loadingDelete[idx]=true;
