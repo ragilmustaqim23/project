@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ApiService } from 'src/app/services/api.service';
+import { FileUploaderComponent } from '../file-uploader/file-uploader.component';
 import { ProductDetailComponent } from '../product-detail/product-detail.component';
 
 @Component({
@@ -80,6 +81,17 @@ export class ProductsComponent implements OnInit {
     });
   }
  
+ }
+
+ uploadFile(data: any)
+ {
+  let dialog=this.dialog.open(FileUploaderComponent, {
+    width:'400px',
+    data:data
+  });
+  dialog.afterClosed().subscribe(res=>{
+    return;
+  })
  }
 
 }

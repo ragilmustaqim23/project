@@ -48,14 +48,19 @@ export class ApiService {
   return this.http.delete(this.serverUrl+url, this.httpOptions);
  }
 
- //register
+ //otentikasi
 register(email: any,password: any)
 {
   return this.http.post(this.serverUrl+'auth/register',{email:email,password:password});
 }
+//login
 login(email: any,password: any)
 {
   return this.http.post(this.serverUrl+'auth/login',{email:email,password:password});
 }
-
+//upload
+upload(file: any)
+{
+  return this.http.post(this.serverUrl+'upload/book',file);
+}
 }
