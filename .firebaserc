@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "project-uas-5d0f1": {
+      "hosting": {
+        "myProject": [
+          "project-uas-5d0f1"
+        ]
+      }
+    }
+  }
+}

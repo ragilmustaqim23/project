@@ -8,6 +8,7 @@ import { ProductsComponent } from './products/products.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { FormsModule } from '@angular/forms';
 import { FileUploaderComponent } from './file-uploader/file-uploader.component';
+import { MatDatepicker} from '@angular/material/datepicker';
 const routes: Routes = [
   {
     path:'',
@@ -43,6 +44,9 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     MaterialDesign,
     FormsModule
+  ],
+  providers: [
+    MatDatepicker
   ]
 })
 export class AdminModule { }

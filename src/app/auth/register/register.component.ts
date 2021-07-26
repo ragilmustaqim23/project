@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
-import { registerLocaleData } from '@angular/common';
 
 @Component({
   selector: 'app-register',
@@ -14,15 +13,13 @@ export class RegisterComponent implements OnInit {
     public api: ApiService,
     public router: Router
   ) { }
-
-
+  
   ngOnInit(): void {
   }
   user:any={};
   hide:boolean=true;
-
 //email= new FormControl('',[Validators.required, Validators.email]);
-  //password= new FormControl('', [Validators.minLength(6), Validators.required]);
+//password= new FormControl('', [Validators.minLength(6), Validators.required]);
 
   loading:boolean | undefined;
   register()

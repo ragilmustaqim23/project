@@ -16,7 +16,7 @@ export class AdminComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.checkLogin();
+    //this.checkLogin();
   }
 
 
@@ -24,7 +24,7 @@ export class AdminComponent implements OnInit {
 
   checkLogin()
   {
-    this.api.get('bookswithauth/status').subscribe(res=>{
+    this.api.get('projects/status').subscribe(res=>{
       //is logged in
       return;
     },err=>{

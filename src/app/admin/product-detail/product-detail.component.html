@@ -1,22 +1,28 @@
 <h3 mat-dialog-title>
-    Detail Masakan
+    Tuliskan tugasmu
  </h3>
  <div mat-dialog-content>
     <mat-form-field appearance="outline" style="width: 100%;">
-        <mat-label>Menu</mat-label>
-        <input matInput [(ngModel)]="data.title">      
+        <mat-label>Mata kuliah</mat-label>
+        <input matInput [(ngModel)]="data.matakuliah">      
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
-        <mat-label>Kesulitan Bahan Yang Dicari</mat-label>
-        <input matInput [(ngModel)]="data.author" >     
+        <mat-label>Nama Dosen</mat-label>
+        <input matInput [(ngModel)]="data.namadosen" >     
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
-        <mat-label>Jenis Masakan</mat-label>
-        <input matInput [(ngModel)]="data.publisher" >     
+        <mat-label>Tugas Yang Diberi</mat-label>
+        <input matInput [(ngModel)]="data.tugasyangdiberi" >     
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
-        <mat-label>Kisaran Harga Bahan</mat-label>
-        <input matInput type="number" [(ngModel)]="data.price" >      
+        <mat-label>Tanggal Kumpul</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="data.tanggalkumpul">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Catatan</mat-label>
+        <input matInput [(ngModel)]="data.catatan">      
     </mat-form-field>
  </div>
  <div mat-dialog-actions align="end">

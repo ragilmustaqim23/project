@@ -8,16 +8,19 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
-  user: any = {};
+  
+  user:any={};
   constructor(
     public api: ApiService,
     public router: Router
   ) { }
-
+  
   ngOnInit(): void {
   }
-
+ 
+  //email = new FormControl('',[Validators.required, Validators.email]);
+  //password= new FormControl('',[Validators.required]);
+  
   login()
   {
     this.api.login(this.user.email, this.user.password).subscribe(res=>{
@@ -28,5 +31,5 @@ export class LoginComponent implements OnInit {
     });
   }
 
-
+  
 }

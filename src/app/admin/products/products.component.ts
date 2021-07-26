@@ -11,8 +11,7 @@ import { ProductDetailComponent } from '../product-detail/product-detail.compone
 })
 export class ProductsComponent implements OnInit {
   title:any;
-  book:any={};
-  books:any=[];
+  projects: any = [];
   constructor(
     public dialog:MatDialog,
     public api:ApiService
@@ -22,24 +21,17 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.title='Products';
-    this.book={
-      title:'Angular untuk Pemula',
-      author:'Farid Suryanto',
-      publisher:'Sunhouse Digital',
-      year:2020,
-      isbn:'8298377474',
-      price:70000
-    };
-    this.getBooks();
+    this.getProjects();
   }
 
   loading:boolean | undefined;
-  getBooks()
+  getProjects()
   {
     this.loading=true;
-   this.api.get('bookswithauth').subscribe(result=>{
-     this.books=result;
-     this.loading=false;
+   this.api.get('projects').subscribe(result=>{
+     this.projects=result;
+     console.log(this.projects)
+     this.loading=false; 
    },error=>{
      this.loading=false;
      alert('Ada masalah saat pengambilan data. Coba lagi!');
@@ -57,9 +49,10 @@ export class ProductsComponent implements OnInit {
      if(res)
      {
         //jika idx=-1 (penambahan data baru) maka tambahkan data
-       if(idx==-1)this.books.push(res);      
+       
+        if(idx==-1)this.projects.push(res);      
         //jika tidak maka perbarui data  
-       else this.books[idx]=data; 
+       else this.projects[idx]=data; 
      }
    })
  }
@@ -72,8 +65,8 @@ export class ProductsComponent implements OnInit {
    if(conf)
    {
     this.loadingDelete[idx]=true;
-    this.api.delete('books/'+id).subscribe(res=>{
-     this.books.splice(idx,1);
+    this.api.delete('projects/'+id).subscribe(res=>{
+     this.projects.splice(idx,1);
      this.loadingDelete[idx]=false;
    },error=>{
     this.loadingDelete[idx]=false;
