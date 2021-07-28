@@ -1,9 +1,9 @@
 {
   "targets": {
-    "project-uas-5d0f1": {
+    "catatan-tugas": {
       "hosting": {
-        "myProject": [
-          "project-uas-5d0f1"
+        "myAngular": [
+          "catatan-tugas"
         ]
       }
     }

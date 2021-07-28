@@ -1,8 +1,8 @@
 {
   "hosting": [
     {
-      "target": "myProject",
-      "public": "dist/myProject",
+      "target": "myAngular",
+      "public": "dist/myAngular",
       "ignore": [
         "**/.*"
       ],

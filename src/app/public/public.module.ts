@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PublicComponent } from './public.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
-import { MaterialDesign } from '../material/material.module';
+import { MaterialDesign } from '../material/material';
 
 const routes: Routes = [
   {
@@ -19,10 +19,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [
-    PublicComponent,
-    HomeComponent
-  ],
+  declarations: [PublicComponent, HomeComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

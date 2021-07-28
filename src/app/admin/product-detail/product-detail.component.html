@@ -1,32 +1,30 @@
 <h3 mat-dialog-title>
-    Tuliskan tugasmu
+    Tambahkan Catatan
  </h3>
  <div mat-dialog-content>
     <mat-form-field appearance="outline" style="width: 100%;">
-        <mat-label>Mata kuliah</mat-label>
-        <input matInput [(ngModel)]="data.matakuliah">      
+        <mat-label>Mata Kuliah</mat-label>
+        <input matInput [(ngModel)]="data.matkul">      
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
         <mat-label>Nama Dosen</mat-label>
-        <input matInput [(ngModel)]="data.namadosen" >     
+        <input matInput [(ngModel)]="data.namdos" >     
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
         <mat-label>Tugas Yang Diberi</mat-label>
-        <input matInput [(ngModel)]="data.tugasyangdiberi" >     
+        <input matInput [(ngModel)]="data.tugas" >     
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
         <mat-label>Tanggal Kumpul</mat-label>
-        <input matInput [matDatepicker]="picker" [(ngModel)]="data.tanggalkumpul">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
+        <input matInput [(ngModel)]="data.tanggal" >     
     </mat-form-field>
     <mat-form-field appearance="outline" style="width: 100%;">
-        <mat-label>Catatan</mat-label>
-        <input matInput [(ngModel)]="data.catatan">      
+        <mat-label>Catatan Tugas</mat-label>
+        <input matInput [(ngModel)]="data.ctt" >     
     </mat-form-field>
+   
  </div>
  <div mat-dialog-actions align="end">
  <button mat-button mat-dialog-close>Batal</button>
  <button mat-flat-button (click)="saveData()" [disabled]="loading">{{loading ? 'Menyimpan..':'Simpan'}} </button>
  </div>
-

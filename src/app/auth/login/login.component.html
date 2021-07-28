@@ -1,26 +1,23 @@
 <div class="uk-flex uk-flex-middle uk-flex-center uk-height-viewport" style="background-image: url('assets/bg2.gif'); background-size: cover; background-position: center;">  
-    <mat-card class="uk-width-1-3@m uk-width-1-2@s">
-        <div class="uk-flex uk-flex-center uk-margin-medium-bottom">
-            <h3>LOGIN</h3>
-        </div>
-      <mat-card-content>
-        <mat-form-field class="uk-width-1-1">
-            <mat-label>Email</mat-label>
-            <input matInput placeholder="your email" [(ngModel)]="user.email">
+  <mat-card class="uk-width-1-3@m uk-width-1-2@s">
+      <div class="uk-flex uk-flex-center uk-margin-medium-bottom">
+          <h3>LOGIN</h3>
+      </div>
+    <mat-card-content>
+      <mat-form-field class="uk-width-1-1">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="your email" [(ngModel)]="user.email">
         </mat-form-field>
-
-          <mat-form-field class="uk-width-1-1">
-            <mat-label>Password</mat-label>
-            <input type="password" matInput placeholder="Your password" [(ngModel)]="user.password" >
-          </mat-form-field>
-          <div class="uk-flex uk-flex-right">
-              <div class="uk-width-expand">
-                <button mat-button routerLink="/register">Create Account</button>
-                
-              </div>
-              <button mat-raised-button color="primary" (click)="login()">LOGIN</button>
-          </div>
-      </mat-card-content>
-    </mat-card>
-  </div>
-  
+        <mat-form-field class="uk-width-1-1">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput placeholder="Your password" [(ngModel)]="user.password" >
+        </mat-form-field>
+        <div class="uk-flex uk-flex-right">
+            <div class="uk-width-expand">
+              <button mat-button routerLink="/register">Create Account</button>
+            </div>
+            <button mat-raised-button color="primary" (click)="login()">LOGIN</button>
+        </div>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -6,15 +6,13 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-//material design
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatCardModule} from '@angular/material/card';
-import { MatError } from '@angular/material/form-field';
-import { MaterialDesign } from './material/material.module';
+import { MaterialDesign } from './material/material';
 import { ForgotComponent } from './auth/forgot/forgot.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment.prod';
 
 @NgModule({
   declarations: [
@@ -27,6 +25,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
     MaterialDesign,
     HttpClientModule,
     FormsModule
